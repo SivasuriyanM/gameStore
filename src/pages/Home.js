@@ -9,8 +9,9 @@ function Home() {
     <div className='menu'>
     <h1 className='menuTitle'>GAMES</h1>
     <div className='menuList'>{games.map((menuItem, key)=>{
-        return (<Item key={key} image={menuItem.image} name={menuItem.name} detail={menuItem.detail} link={menuItem.link}/>);
-    })}</div>
+        return (<Item key={key} image={menuItem.image} name={menuItem.name} detail={menuItem.detail} link={menuItem.link} gameData = {menuItem}/>);
+    })}
+    </div>
     </div>
   )
 }
