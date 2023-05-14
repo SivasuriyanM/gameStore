@@ -11,7 +11,11 @@
 # production
 /build
 
-# misc
+# Ignore files with extension `.class` & `.exe`
+*.mp4
+*.exe
+# 
+
 .DS_Store
 .env.local
 .env.development.local

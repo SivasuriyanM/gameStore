@@ -1,7 +1,7 @@
 import React from 'react'
 import Dialog from './Dialog';
 import './style.css';
-function Item(props) {
+function PreItem(props) {
   return (
     <>
      <div className='menuItem'>
@@ -14,4 +14,4 @@ function Item(props) {
   )
 }
 
-export default Item
+export default PreItem

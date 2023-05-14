@@ -17,16 +17,17 @@ function NavBar() {
             <div className='hiddenLinks'>
             <Link to="/">HOME</Link>
             <Link to="/games">GAMES</Link>
+            <Link to="/signIn">LOG OUT</Link>
             </div>
         </div>
         <div className='rightSide'>
             <Link to="/">HOME</Link>
             <Link to="/games">GAMES</Link>
+            <Link to="/signIn">LOG OUT</Link>
             <button onClick={toggleNavbar }>
             <Reorder/>
             </button>
         </div>
-        
     </div>
   )
 }
