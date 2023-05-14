@@ -1,11 +1,13 @@
 .navbar {
-    width: 100%;
-    height: 75px;
-    background-color:#18191b;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    z-index: 99;
+  width: 100%;
+  height: 75px;
+  background-color: #18191b;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 999;
   }
   
   .navbar .leftSide {
@@ -26,6 +28,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 222px;
   }
   
   .navbar a {
@@ -101,4 +105,9 @@
     .hiddenLinks {
       display: none;
     }
+  }
+
+  .app-name {
+    position: relative !important;
+    right: 175px !important;
   }

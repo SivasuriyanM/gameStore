@@ -11,7 +11,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
-import { ImageListItem, ListItemAvatar, ListItemIcon } from '@material-ui/core';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -78,14 +77,15 @@ export default function FullScreenDialog(props) {
              secondary={props.details.size}/>
           </ListItem>
           <Divider />
+          <ListItem>
+            <img className = 'preview-img' style = {{height : '238px',width : '400px', position: 'relative',left:'410px'}} src={props.details.image} alt = 'game-name'/>
+          </ListItem>
           <Divider />
           <ListItem >
             <ListItemText>{props.details.link}</ListItemText>
           </ListItem>
           <Divider />
-          <ListItem>
-            <ImageListItem primary={props.details.Image}/>
-          </ListItem>
+          
         </List>
        
       </Dialog>

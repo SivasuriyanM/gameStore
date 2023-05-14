@@ -14,16 +14,15 @@ function NavBar() {
     <div className='navbar'>
         <div className='leftSide' id={openLinks?"open":"close"} >
             <img src = {logo} alt='logo'/>
+            <span className = 'app-name'>CS Games</span>
             <div className='hiddenLinks'>
-            <Link to="/">HOME</Link>
-            <Link to="/games">GAMES</Link>
-            <Link to="/signIn">LOG OUT</Link>
+           
+            <Link to="/">LOG OUT</Link>
             </div>
         </div>
         <div className='rightSide'>
-            <Link to="/">HOME</Link>
-            <Link to="/games">GAMES</Link>
-            <Link to="/signIn">LOG OUT</Link>
+            
+            <Link to="/">LOG OUT</Link>
             <button onClick={toggleNavbar }>
             <Reorder/>
             </button>

@@ -38,7 +38,7 @@ export const games = [
         id: "1",
         size:"Size : 14.5 MB",
         version : "Version : 1.0(x86)",
-        link : <button onClick ={()=>{downloadFile(NFE)}}>Download</button>
+        link :<button className = 'btn'onClick ={()=>{downloadFile(NFE)}}>Download</button>
 
     },
     {
@@ -48,7 +48,7 @@ export const games = [
         id: "2",
         size:"Size : 3.2 MB",
         version : "Version : 1.0(x86)",
-        link : <button onClick ={()=>{downloadFile(SF2)}}>Download</button>
+        link :<button  className = 'btn'onClick ={()=>{downloadFile(SF2)}}>Download</button>
     },
     {
         name: "Star Gunner",
@@ -57,7 +57,7 @@ export const games = [
         id: "3",
         size:"Size : 10.1 MB",
         version : "Version : 1.0(x86)",
-        link : <button onClick ={()=>{downloadFile(SG)}}>Download</button>
+        link :<button  className = 'btn'onClick ={()=>{downloadFile(SG)}}>Download</button>
 
     },
     {
@@ -67,7 +67,7 @@ export const games = [
         id: "4",
         size:"Size : 16.7 MB",
         version : "Date update: Dec 3, 2020",
-        link : <button onClick ={()=>{downloadFile(NB)}}>Download</button>
+        link :<button  className = 'btn'onClick ={()=>{downloadFile(NB)}}>Download</button>
     },
     {
         name: "Water Bugs",
@@ -76,7 +76,7 @@ export const games = [
         id: "5",
         size:"Size : 8.6 MB",
         version : "Version: 1.1 (x86)",
-        link : <button onClick ={()=>{downloadFile(WB)}}>Download</button>
+        link :<button  className = 'btn'onClick ={()=>{downloadFile(WB)}}>Download</button>
     },
     {
         name: "Mahjong World",
@@ -85,7 +85,7 @@ export const games = [
         id: "6",
         size:"Size : 7.8 MB",
         version : " Version: 7.3.40 (x86)",
-        link : <button onClick ={()=>{downloadFile(MW)}}>Download</button>
+        link :<button  className = 'btn'onClick ={()=>{downloadFile(MW)}}>Download</button>
     },
     {
         name: "Racing Impossible",
@@ -94,7 +94,7 @@ export const games = [
         id: "7",
         size:"Size : 30.3 MB",
         version : "Version: 1.0.0.1 (x86)",
-        link : <button onClick ={()=>{downloadFile(RI)}}>Download</button>
+        link :<button  className = 'btn'onClick ={()=>{downloadFile(RI)}}>Download</button>
     },
     {
         name: "Sound Blaster",
@@ -103,7 +103,7 @@ export const games = [
         id: "7",
         size:"Size : 46.7 MB",
         version : "Date update: Jan 27, 2012",
-        link : <button onClick ={()=>{downloadFile(SB)}}>Download</button>
+        link :<button  className = 'btn'onClick ={()=>{downloadFile(SB)}}>Download</button>
     },
     {
         name: "Super Police Racing",
@@ -112,6 +112,6 @@ export const games = [
         id: "7",
         size:"Size : 47.5 MB",
         version : "Date update: Apr 5, 2023",
-        link : <button onClick ={()=>{downloadFile(SPR)}}>Download</button>
+        link :<button  className = 'btn'onClick ={()=>{downloadFile(SPR)}}>Download</button>
     },
 ];

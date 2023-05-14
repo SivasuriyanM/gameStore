@@ -12,8 +12,7 @@
 /build
 
 # Ignore files with extension `.class` & `.exe`
-*.mp4
-*.exe
+
 # 
 
 .DS_Store

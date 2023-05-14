@@ -1,121 +1,142 @@
 import React,{useState} from 'react';
-import '../components/style.css';
+import '../styles/login.css';
 
+const userDetails = [
+  {
+    username : "mithula",
+    email :"mithula@gmail.com",
+    pswd : "user1"
+  },
+  {
+    username : "jayani",
+    email :"jayani@gmail.com",
+    pswd : "user2"
+  }
+];
 function Authenticate() {
-//     const [loginPage,setloginPage] = useState(true);
-//   const [mainPage,setmainPage] = useState(false);
   const [error,setError] = useState(false);
+  const [errMsgL,setErrMsgL] = useState("");
+  const [errMsgSu,setErrMsgSu] = useState("");
 
   const onLogin = (e) => {
 
     let username = document.getElementById('logemail');
     let pswd = document.getElementById('logpass');
 
-    if((username.value === 'abc' && pswd.value === '123') || (username.value === 'efg' && pswd.value === '456') ){
-        window.location.href = 'http://localhost:3000/home';
+    if((username.value === 'mithula@gmail.com' && pswd.value === 'user1') || (username.value === 'jayani@gmail.com' && pswd.value === 'user2') ){
+      window.location.reload();  
+      window.location.href = 'http://localhost:3000/home';
     } else {
         setError(true);
+        setErrMsgL("*username or password not matched");
     }
-
-    // setmainPage(true);
-    // setloginPage(false);
   }
+
+  const onSignUp = (e) => {
+    let email = document.getElementById('logemail-sign');
+
+        userDetails && userDetails.foreach((usr,idx) => {
+          if(usr.email === email.value ){
+            setError(true);
+            setErrMsgSu("User Already registered..!");
+          }
+        });
+  }
+
   return (
     <div>
         {
-        // loginPage && 
-        <div className='App'>
-         <div class="section">
-         <div class="container">
-           <div class="row full-height justify-content-center">
-             <div class="col-12 text-center align-self-center py-5">
-               <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                 <h6 class="mb-0 pb-3">
+        <div classNameName='App'>
+         <div className="section">
+         <div className="container">
+           <div className="row full-height justify-content-center">
+             <div className="col-12 text-center align-self-center py-5">
+               <div className="section pb-5 pt-5 pt-sm-2 text-center">
+                 <h6 className="mb-0 pb-3">
                    <span>Log In </span><span>Sign Up</span>
                  </h6>
                  <input
-                   class="checkbox"
+                   className="checkbox"
                    type="checkbox"
                    id="reg-log"
                    name="reg-log"
                  />
                  <label for="reg-log"></label>
-                 <div class="card-3d-wrap mx-auto">
-                   <div class="card-3d-wrapper">
-                     <div class="card-front">
-                       <div class="center-wrap">
-                         <div class="section text-center">
-                           <h4 class="mb-4 pb-3">Log In</h4>
-                           {error && <span>*username or password not matched</span>}
-                           <div class="form-group">
+                 <div className="card-3d-wrap mx-auto">
+                   <div className="card-3d-wrapper">
+                     <div className="card-front">
+                       <div className="center-wrap">
+                         <div className="section text-center">
+                           <h4 className="mb-4 pb-3">Log In</h4>
+                           {error && <span style = {{fontSize: "inherit"}}>{errMsgL}</span>}
+                           <div className="form-group">
                              <input
                                type="email"
                                name="logemail"
-                               class="form-style"
+                               className="form-style"
                                placeholder="Your Email"
                                id="logemail"
                                autocomplete="off"
                              />
-                             <i class="input-icon uil uil-at"></i>
+                             <i className="input-icon uil uil-at"></i>
                            </div>
-                           <div class="form-group mt-2">
+                           <div className="form-group mt-2">
                              <input
                                type="password"
                                name="logpass"
-                               class="form-style"
+                               className="form-style"
                                placeholder="Your Password"
                                id="logpass"
                                autocomplete="off"
                              />
-                             <i class="input-icon uil uil-lock-alt"></i>
+                             <i className="input-icon uil uil-lock-alt"></i>
                            </div>
-                           <button class="btn mt-4" onClick={(e)=>{onLogin(e)}}>Submit</button>
-                           {/* <a href="#" class="btn mt-4">submit</a> */}
-                           <p class="mb-0 mt-4 text-center">
-                             <a href="#0" class="link">Forgot your password?</a>
+                           <button className="btn mt-4" onClick={(e)=>{onLogin(e)}}>Log In</button>
+                           <p className="mb-0 mt-4 text-center">
+                             <a href="#0" className="link">Forgot your password?</a>
                            </p>
                          </div>
                        </div>
                      </div>
-                     <div class="card-back">
-                       <div class="center-wrap">
-                         <div class="section text-center">
-                           <h4 class="mb-4 pb-3">Sign Up</h4>
-                           <div class="form-group">
+                     <div className="card-back">
+                       <div className="center-wrap">
+                         <div className="section text-center">
+                           <h4 className="mb-4 pb-3">Sign Up</h4>
+                           {error && <span style = {{fontSize: "inherit"}}>{errMsgSu}</span>}
+                           <div className="form-group">
                              <input
                                type="text"
                                name="logname"
-                               class="form-style"
+                               className="form-style"
                                placeholder="Your Full Name"
                                id="logname"
                                autocomplete="off"
                              />
-                             <i class="input-icon uil uil-user"></i>
+                             <i className="input-icon uil uil-user"></i>
                            </div>
-                           <div class="form-group mt-2">
+                           <div className="form-group mt-2">
                              <input
                                type="email"
                                name="logemail"
-                               class="form-style"
+                               className="form-style"
                                placeholder="Your Email"
-                               id="logemail"
+                               id="logemail-sign"
                                autocomplete="off"
                              />
-                             <i class="input-icon uil uil-at"></i>
+                             <i className="input-icon uil uil-at"></i>
                            </div>
-                           <div class="form-group mt-2">
+                           <div className="form-group mt-2">
                              <input
                                type="password"
                                name="logpass"
-                               class="form-style"
+                               className="form-style"
                                placeholder="Your Password"
                                id="logpass"
                                autocomplete="off"
                              />
-                             <i class="input-icon uil uil-lock-alt"></i>
+                             <i className="input-icon uil uil-lock-alt"></i>
                            </div>
-                           <button class="btn mt-4" onClick={(e)=>{onLogin()}}>Submit</button>
-                           {/* <a href="#" class="btn mt-4">submit</a> */}
+                           <button className="btn mt-4" onClick={(e)=>{onSignUp(e)}}>Sign Up</button>
                          </div>
                        </div>
                      </div>
@@ -131,4 +152,4 @@ function Authenticate() {
   )
 }
 
-export default Authenticate
+export default Authenticate;
